@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1.3rem;
+  position: relative;
 }
 p {
   margin: 0;
@@ -25,6 +26,7 @@ span {
 }
 .folder {
   height: 20rem;
+  max-width: 35rem;
   padding: 4rem;
   border-radius: 1rem 10rem 1rem 1rem;
   margin-bottom: 1.6rem;
@@ -96,7 +98,7 @@ span {
 .storage__max {
   float: right;
 }
-.storage__size {
+.storage__sizeLeft {
   display: flex;
   align-items: center; /* to vertically align different font sizes*/
   width: fit-content; /* to avoid text wrap in p element */
@@ -107,10 +109,10 @@ span {
   color: hsl(229, 7%, 55%);
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
 }
-.storage__size > span {
+.storage__sizeLeft > span {
   margin-right: 1rem;
   font-size: 3.8rem;
   line-height: 3.8rem;
@@ -118,9 +120,63 @@ span {
 }
 
 .attribution {
+  width: fit-content;
   font-size: 1.1rem;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 975px) {
+  body {
+    height: 800px;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(../images/bg-desktop.png);
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+  .bodyWrap {
+    display: flex;
+    align-items: flex-end;
+    width: 970px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  .folder,
+  .storage {
+    float: left;
+  }
+  .folder {
+    min-width: 350px;
+    margin: 0 25px 0 0;
+  }
+  .storage {
+    width: 100%;
+  }
+  .storage__desc {
+    text-align: left;
+  }
+  .storage__sizeLeft {
+    top: 0;
+    right: 0;
+    transform: translate(-3.2rem, -50%);
+  }
+  .storage__arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid white;
+    position: absolute;
+    top: 15px;
+    right: 3.2rem;
+  }
 }
