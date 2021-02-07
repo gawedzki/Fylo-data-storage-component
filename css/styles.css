@@ -7,7 +7,7 @@ html {
 }
 body {
   min-width: 37.5rem;
-  min-height: 66.7rem;
+  min-height: 100vh;
   margin: 0;
   background-image: url(../images/bg-mobile.png);
   background-repeat: no-repeat;
@@ -134,7 +134,6 @@ span {
 
 @media only screen and (min-width: 975px) {
   body {
-    height: 800px;
     background-color: hsl(229, 57%, 11%);
     background-image: url(../images/bg-desktop.png);
     background-size: 100% 50%;
