@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  min-width: 37.5rem;
+  min-height: 66.7rem;
+  margin: 0;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.3rem;
+}
+p {
+  margin: 0;
+}
+span {
+  font-weight: 700;
+}
+.bodyWrap {
+  padding: 12.7rem 2.5rem;
+}
+.folder {
+  height: 20rem;
+  padding: 4rem;
+  border-radius: 1rem 10rem 1rem 1rem;
+  margin-bottom: 1.6rem;
+  background-color: hsl(228, 56%, 26%);
+  position: relative;
+}
+.folder__iconsBox {
+  position: absolute;
+  left: 4rem;
+  bottom: 4rem;
+}
+.folder__icon {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  background-color: hsl(229, 57%, 11%);
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+.folder__icon:last-child {
+  margin-right: 0;
+}
+.storage {
+  height: 16rem;
+  padding: 3.2rem;
+  border-radius: 1rem;
+  background-color: hsl(228, 56%, 26%);
+  color: hsl(243, 100%, 93%);
+  position: relative;
+}
+.storage__desc {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.storage__barOuter {
+  height: 2rem;
+  border: 3px solid hsl(226, 59%, 19%);
+  border-radius: 1rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+  background-color: hsl(226, 59%, 19%);
+}
+.storage__barInner {
+  width: 74%;
+  height: 1.4rem;
+  border-radius: 0.8rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  position: relative;
+}
+.storage__barDot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(255, 100%, 100%);
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+.storage__min {
+  float: left;
+}
+.storage__max {
+  float: right;
+}
+.storage__size {
+  display: flex;
+  align-items: center; /* to vertically align different font sizes*/
+  width: fit-content; /* to avoid text wrap in p element */
+  padding: 1.6rem 2.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  font-weight: 700;
+  color: hsl(229, 7%, 55%);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.storage__size > span {
+  margin-right: 1rem;
+  font-size: 3.8rem;
+  line-height: 3.8rem;
+  color: hsl(229, 57%, 11%);
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
